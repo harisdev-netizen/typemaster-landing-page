@@ -49,6 +49,11 @@ body {
   cursor: pointer;
 }
 
+.header a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
 .main {
   max-width: 1110px;
   width: 100%;
@@ -112,6 +117,10 @@ body {
   cursor: pointer;
 }
 
+.hero__button:hover {
+  background-color: var(--color-primary-light);
+}
+
 .hero__release {
   font-family: var(--font-family);
   font-size: 16px;
@@ -121,7 +130,6 @@ body {
   color: var(--color-text-paragraph);
 }
 
-
 .hero__image img {
   width: 100%;
   border-radius: 10px;
@@ -129,37 +137,38 @@ body {
 
 .features {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
   margin-bottom: 168px;
 }
 
-.features__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.features__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.features__image:nth-child(1) {
+.features__image {
   height: 480px;
-  width: auto;
+  max-width: 255px;
   border-radius: 10px;
   object-fit: cover;
 }
 
 .features__image:nth-child(2) {
-  min-height: 480px;
   max-width: 480px;
-  border-radius: 10px;
-  object-fit: cover;
+}
+
+.features__image--orange {
+  filter: brightness(0.4) sepia(100%) hue-rotate(-15deg) saturate(6);
 }
 
 .features__details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 255px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -169,7 +178,7 @@ body {
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
-  margin-bottom: 27px;
+  margin-bottom: 1rem;
   color: var(--color-secondary);
 }
 
@@ -186,17 +195,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 2rem;
+  margin-bottom: 128px;
 }
-
-/* .specs__item {
-  text-align: center;
-} */
 
 .specs__item img {
   margin-bottom: 48px;
 }
 
 .specs__item h3 {
+  font-family: var(--font-family);
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 24px;
 }
 
@@ -208,11 +218,19 @@ body {
   color: var(--color-text-paragraph);
 }
 
-.footer {
+.footer p {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
   text-align: center;
+  letter-spacing: 1px;
   padding: 1rem;
-  background-color: var(--color-secondary);
-  color: var(--color-accent);
+  margin-bottom: 39px;
+  color: var(--color-text-paragraph);
+}
+
+.footer p span {
+  font-weight: bold;
 }
 
 
